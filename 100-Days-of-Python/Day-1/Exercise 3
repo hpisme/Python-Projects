@@ -1,0 +1,3 @@
+#Program that prints the length of a user's name
+print(len(input("What is your name?")))
+
