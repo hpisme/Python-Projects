@@ -1,0 +1,15 @@
+# Split string method
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+import random
+# list_length = len(names)
+# random_number = random.randint(0,list_length - 1)
+
+# chosen_person = names[random_number]
+
+chosen_person = random.choice(names)
+print(f"{chosen_person} is going to buy the meal today!")
