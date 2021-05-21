@@ -1,6 +1,6 @@
 """Conditionals / Flow Control"""
 
-#If loops
+#If statement
 if 2 > 1:
   print('2 is greater than 1')
   
@@ -10,7 +10,7 @@ if 3 < 2:
 else:
   print('This will print!')
   
- #Adding an elif statement
+#Adding an elif statement
 x = 0
 if x == 1:
   print('This will print if x is 1.')
