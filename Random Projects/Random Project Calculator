@@ -1,0 +1,46 @@
+"""At the time of writing this code I haven't learned more sophisticated methods
+of getting / replacing the data I need so I've stored data in a list and it's up
+to the user to delete from one list and add to the other. I will update versions of
+this project in the future as I learn and make my code more efficient."""
+
+
+def random_project():
+    """Picks a random project from the list of projects I have completed"""
+    import random
+    project_list = ['Input Function', 'Tip Calculator', 'Band Name Generator',
+                    'BMI Calculator', 'Life in Weeks', 'Odd or Even', 'BMI 2.0',
+                    'Leap Year', 'Pizza Order', 'Love Calculator', 'Treasure Island',
+                    'Banker Roulette', 'Treasure Map', 'Rock Paper Scissors', 'Average Height',
+                    'Adding Even Numbers', 'FizzBuzz', 'Password Generator - Easy',
+                    'Password Generator - Hard', 'Reeborg functions', 'Hangman',
+                    'Paint Area Calculator', 'Prime Number Checker', 'Ceaser Cipher',
+                    'Grading Program', 'Nested Dictionaries', 'Secret Auction', 'Days in Month',
+                    'Calculator', 'Blackjack']
+    # Be sure to remove projects from the above list when complete
+    return random.choice(project_list)
+
+
+def check_completed(project):
+    """Checks to see if I've already completed the project.
+    If a project has been completed it should be removed from the list"""
+    already_complete = []  # Add to this list if you've already completed a project
+    if project not in already_complete:
+        return True
+    else:
+        return False
+
+
+def valid_project():
+    """This function prints the project to complete for the day or prints an error message if a project
+    has already been completed but not removed from the random_project list"""
+    project_to_complete = random_project()
+    project_complete_check = check_completed(project_to_complete)
+
+    if project_complete_check:
+        print(f"Your project for the day is: {project_to_complete}.")
+
+    else:
+        print(f"You've already completed {project_to_complete}. You should remove it from the list.")
+
+
+valid_project()
