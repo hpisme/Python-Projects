@@ -43,7 +43,7 @@ def valid_project():
     project_complete_check = check_completed(project_to_complete)
 
     if project_complete_check:
-        print(f"Your project for the day is: {project_to_complete}.")
+        print(f"Your extra project for the day is: {project_to_complete}.")
 
     else:
         print(f"You've already completed {project_to_complete}. You should remove it from the list.")
