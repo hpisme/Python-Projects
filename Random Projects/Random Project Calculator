@@ -1,7 +1,13 @@
-"""At the time of writing this code I haven't learned more sophisticated methods
+"""
+This project outputs a random project from the '100 Days of Python' course on Udemy. 
+I wanted extra practice to solidify my understanding of the concepts, but this 
+program can be used for any subject.
+
+At the time of writing this code I haven't learned more sophisticated methods
 of getting / replacing the data I need so I've stored data in a list and it's up
 to the user to delete from one list and add to the other. I will update versions of
-this project in the future as I learn and make my code more efficient."""
+this project in the future as I learn new concepts.
+"""
 
 
 def random_project():
