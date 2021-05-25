@@ -1,0 +1,59 @@
+"""This is my attempt without the professor's guidance."""
+
+
+
+def random_number():
+    import random
+    return random.randint(1, 101)
+
+
+def check_number(number, guess):
+    if guess > number:
+        print('Too high. Try again.')
+        return -1
+    elif guess < number:
+        print('Too low. Try again.')
+        return -1
+    else:
+        print(f'{number} is the correct number!')
+        return 0
+
+
+def play_game():
+    easy_attempts = 10
+    hard_attempts = 5
+    ran_num = random_number()
+    from art import logo
+    print(logo)
+    print('Welcome to the number guessing game!')
+    print(f'Psst, for debugging: {ran_num} is the number')
+
+    user_mode = input("Choose a difficulty. Type 'easy' or 'hard'. ").lower()
+
+    if user_mode == 'easy' or user_mode == 'hard':
+        while easy_attempts > 0 and hard_attempts > 0:
+            user_guess = int(input('Guess a number. '))
+            attempt = check_number(number=ran_num, guess=user_guess)
+            if attempt == 0:
+                break
+            if user_mode == 'easy':
+                easy_attempts += attempt
+                print(f'You have {easy_attempts} attempts remaining.')
+            elif user_mode == 'hard':
+                hard_attempts += attempt
+                print(f'You have {hard_attempts} attempts remaining.')
+
+        if easy_attempts == 0 or hard_attempts == 0:
+            print('Game over. You lose.')
+
+        should_continue = input("Would you like to play again? 'y' for yes or 'n' for no. ")
+        if should_continue == 'y':
+            play_game()
+        else:
+            print('Thanks for playing!')
+
+    else:
+        print('You entered an invalid input.')
+
+
+play_game()
